@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>registration form</title>
+    </head>
+    <script>
+        function data()
+        {
+            var a=document.getElementById('name').value;
+            var b=document.getElementById('pwd').value;
+            var c=document.getElementById('rsw').value;
+            if(a==''|b==''|c=='')
+            {
+                alert('all fields must be fiiled');
+                return false;
+            }
+            else if(b.legth<6)
+            {
+                alert('all fields must be filled');
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+    <body>
+        <form onsubmit="return data()" action="h1.html">
+            <label for="name">name</label>
+            <input type="text" name="name" id="name">
+            <label for="password">password</label>
+            <input type="password" name="pwd" id="psw">
+            <label for="password">re enter password</label>
+            <input type="password" name="pwd" id="rsw">
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Submit
+            </button>
+            
+        </form>
+    </body>
+</html>
